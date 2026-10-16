@@ -10,10 +10,8 @@
 #include <locale.h>
 #include <math.h>
 
-int main()
+void zadanie1()
 {
-    setlocale(LC_CTYPE, "RUS");
-
     double x, y, F;
 
     printf("Введите x: ");
@@ -21,10 +19,14 @@ int main()
     printf("Введите y: ");
     scanf("%lf", &y);
 
-    F = 1 + pow(tan(y + x / (y * y + fabs(x / (y + 3)))), 2);
+    F = 1 + pow(tan(y + x * x / (y + x * x * x / 3)), 2);
 
     printf("F(%.2e, %.3f) = %.3f\n", x, y, F);
-
+}
+int main()
+{
+    setlocale(LC_CTYPE, ".UTF-8");
+    zadanie1();
     return 0;
 }
 ```
