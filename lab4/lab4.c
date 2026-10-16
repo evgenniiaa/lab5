@@ -7,13 +7,8 @@
 
 double a, b, y;
 
-void zadanie1();
-void zadanie2();
-void zadanie3();
-
-void zadanie1()
+int zadanie1()
 {
-    // вычисление sin угла, заданного в градусах
     double gr, rad;
 
     printf("1. Введите угол в градусах: ");
@@ -24,9 +19,8 @@ void zadanie1()
     printf("sin(%.0lf град) = %.6lf\n", gr, sin(rad));
 }
 
-void zadanie2()
+int zadanie2()
 {
-    //2. вар 4. вычисление функции y
     double x;
 
     printf("2. Введите x: ");
@@ -43,7 +37,7 @@ void zadanie2()
     printf("y = (|a - b*x|)^(1/5) = %.6lf\n", y);
 }
 
-void zadanie3()
+int zadanie3()
 {
     int A = (int)a;
     int B = (int)b;
@@ -61,7 +55,7 @@ void zadanie3()
 
 int main()
 {
-    setlocale(LC_CTYPE, "RUS");
+    setlocale(LC_CTYPE, ".UTF-8");
 
     zadanie1();
     zadanie2();
