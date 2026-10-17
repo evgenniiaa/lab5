@@ -15,9 +15,8 @@ double F(double x, double y)
     return 1 + pow(tan(y + x / (y * y + fabs(x * x / (y + x * x * x / 3.0)))), 2);
 }
 
-int main()
+void zadanie1()
 {
-    setlocale(LC_ALL, ".UTF-8");
     double x, y;
 
     printf("Введите x: ");
@@ -26,6 +25,11 @@ int main()
     scanf("%lf", &y);
 
     printf("F(%.2e, %.3f) = %.3f\n", x, y, F(x, y));
+}
+int main()
+{
+    setlocale(LC_ALL, ".UTF-8");
+    zadanie1();
     return 0;
 }
 ```
