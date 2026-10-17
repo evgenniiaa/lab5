@@ -10,23 +10,22 @@
 #include <locale.h>
 #include <math.h>
 
-void zadanie1()
+double F(double x, double y)
 {
-    double x, y, F;
+    return 1 + pow(tan(y + x / (y * y + fabs(x * x / (y + x * x * x / 3.0)))), 2);
+}
+
+int main()
+{
+    setlocale(LC_ALL, ".UTF-8");
+    double x, y;
 
     printf("Введите x: ");
     scanf("%lf", &x);
     printf("Введите y: ");
     scanf("%lf", &y);
 
-    F = 1 + pow(tan(y + x * x / (y + x * x * x / 3)), 2);
-
-    printf("F(%.2e, %.3f) = %.3f\n", x, y, F);
-}
-int main()
-{
-    setlocale(LC_CTYPE, ".UTF-8");
-    zadanie1();
+    printf("F(%.2e, %.3f) = %.3f\n", x, y, F(x, y));
     return 0;
 }
 ```
@@ -34,8 +33,8 @@ int main()
 ### 2. Результат работы программы
 ```
 Введите x: 2e-4
-Введите y: -0.003
-F(2.00e-04, -0.003) = 1.304
+Введите y: -0,003
+F(2,00e-04, -0,003) = 1,261
 ```
 ### 3. Информация о разработчике
 Федорова Евгения бИД-261
