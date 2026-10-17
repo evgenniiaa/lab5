@@ -17,6 +17,7 @@ int zadanie1()
     rad = gr * M_PI / 180.0;
 
     printf("sin(%.0lf град) = %.6lf\n", gr, sin(rad));
+    return 0;
 }
 
 int zadanie2()
@@ -35,6 +36,7 @@ int zadanie2()
     printf("a = ln(%.2lf) = %.6lf\n", x, a);
     printf("b = sqrt(%.2lf^2 + %.0lf^2) = %.6lf\n", x, T, b);
     printf("y = (|a - b*x|)^(1/5) = %.6lf\n", y);
+    return 0;
 }
 
 int zadanie3()
@@ -51,6 +53,7 @@ int zadanie3()
 
     printf("а) только одно из A и B чётное: %d\n", cond_a);
     printf("б) A, B, C кратны трём: %d\n", cond_b);
+    return 0;
 }
 
 int main()
